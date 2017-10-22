@@ -2,7 +2,7 @@
 MobileApp Course Repository Toma Elena oana group 933
 
 
-                                 HealthVet- your personal veterinary & pet care asistent
+                                 VetHealth- your personal veterinary & pet care asistent
 
  
           1.Business Information
