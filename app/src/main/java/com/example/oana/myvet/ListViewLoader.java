@@ -20,6 +20,7 @@ public class ListViewLoader extends Activity{
     ArrayAdapter<String> adapter;
     ListView myListView=null;
     Button sendMailButton;
+    String current_email;
 
 
 
@@ -35,6 +36,9 @@ public class ListViewLoader extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_items);
         setTitle("Veterinary clinics available");
+
+        Intent myIntent = getIntent(); // gets the previously created intent
+        current_email=myIntent.getStringExtra("current_email"); // will return "FirstKeyValue"
         // Create a progress bar to display while the lis loads
         ProgressBar progressBar = new ProgressBar(this);
         progressBar.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.CENTER));
@@ -48,7 +52,7 @@ public class ListViewLoader extends Activity{
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"oana.elena.toma1995@gmail.com"});
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{current_email});
                 i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
                 i.putExtra(Intent.EXTRA_TEXT   , "body of email");
                 try {
