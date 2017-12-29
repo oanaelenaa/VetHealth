@@ -22,8 +22,6 @@ public class ListViewLoader extends Activity{
     Button sendMailButton;
     String current_email;
 
-
-
     private void populateListView(){
         adapter=new ArrayAdapter<String>(this,R.layout.data_item,R.id.edit_item,items);
         myListView =(ListView)findViewById(R.id.myListView);

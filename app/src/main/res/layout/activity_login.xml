@@ -72,6 +72,14 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_centerInParent="true"/>
 
         </LinearLayout>
     </ScrollView>
@@ -80,6 +88,13 @@
         android:id="@+id/imageView"
         android:layout_width="193dp"
         android:layout_height="173dp"
-        android:background="@drawable/ic_launcher_background"
-        app:srcCompat="@android:drawable/ic_lock_lock" />
+        android:src="@drawable/catsdogs" />
+    <Button
+        android:id="@+id/register_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Register to create an account"
+        android:textStyle="bold" />
 </LinearLayout>
